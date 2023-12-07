@@ -6,11 +6,14 @@
 	import type { FFmpeg } from '@ffmpeg/ffmpeg';
 
 	import { fetchAndConvertToUint8Array, convertBufferToURL } from '$lib';
+	import FileInput from '../components/FileInput.svelte';
+	import { page } from '$app/stores';
 
 	type Log = {
 		type: string;
 		message: string;
 	};
+
 	let video: string = '';
 	let message = $state('Click Start to Transcode');
 	let ffmpeg: FFmpeg;
@@ -47,19 +50,8 @@
 </script>
 
 <main>
-	<video src={video} controls>
-		<track kind="captions" />
-	</video>
-
-	<br />
-	<button on:click={transcode}>Start</button>
-	<p>{message}</p>
-	<h1>Heading</h1>
-	{#each logs as log}
-		<pre>
-			{JSON.stringify(log)}
-		</pre>
-	{/each}
+	<FileInput />
+	{#if $page.form?.success}<p>Done</p>{/if}
 </main>
 
 <style>

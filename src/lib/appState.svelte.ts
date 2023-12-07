@@ -1,6 +1,7 @@
 export class AppState {
 	private static _instance: AppState | null = null;
 	public inputFile: File | null = $state(null);
+	public transcript: any = $state(null);
 
 	private constructor() {}
 
