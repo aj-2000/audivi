@@ -7,7 +7,6 @@
 
 	import { fetchAndConvertToUint8Array, convertBufferToURL } from '$lib';
 	import FileInput from '../components/FileInput.svelte';
-	import { page } from '$app/stores';
 
 	type Log = {
 		type: string;
@@ -50,8 +49,8 @@
 </script>
 
 <main>
-	<FileInput />
-	{#if $page.form?.success}<p>Done</p>{/if}
+	<!-- <FileInput /> -->
+	heelo
 </main>
 
 <style>
