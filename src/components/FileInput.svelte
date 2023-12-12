@@ -8,7 +8,6 @@
 		if (target.files) {
 			if (target.files.length > 0) {
 				appState.inputFile = target.files[0];
-				console.log(appState.inputFile);
 			}
 		}
 	}
@@ -16,13 +15,13 @@
 	async function getTranscript(event: Event) {
 		const formEl = event.target as HTMLFormElement;
 		const data = new FormData(formEl);
-		console.log(data);
 
 		const res = await axios.post(formEl.action, data, {
 			headers: { 'Content-Type': 'multipart/form-data' }
 		});
 
 		if (res.status === 200) {
+			console.log(res.data.result);
 			appState.transcript = res.data.result;
 		} else {
 			alert('can not get transcript');
