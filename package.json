@@ -12,8 +12,9 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.27.4",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "autoprefixer": "^10.4.16",
@@ -35,7 +36,7 @@
     "@deepgram/sdk": "3.0.0-beta.6",
     "@ffmpeg/core": "0.11.0",
     "@ffmpeg/ffmpeg": "0.11.6",
-    "@sveltejs/adapter-static": "^2.0.3",
+    "@sveltejs/adapter-static": "^3.0.0",
     "axios": "^1.6.2"
   }
 }
